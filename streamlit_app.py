@@ -4,10 +4,10 @@ import math
 # Definere brukergrensesnittet med Streamlit
 st.title("GAS Transport Kalkulator")
 
-total_gas = st.number_input("Total mengde GAS", min_value=1, value=1000000, step=1)
-ship_capacity = st.number_input("Kapasitet per tur", min_value=1, value=120000, step=1)
-trip_duration = st.number_input("Varighet av en rundtur (dager)", min_value=1, value=20, step=1)
-days_in_year = st.number_input("Antall dager i et år", min_value=1, value=365, step=1)
+total_gas = st.number_input("Total mengde CO2", min_value=1, value=1000000, step=1)
+ship_capacity = st.number_input("Tank Kapasitet - per tur", min_value=1, value=120000, step=1)
+trip_duration = st.number_input("Varighet av en rundtur (dager frem og tilbake)", min_value=1, value=20, step=1)
+days_in_year = 365
 
 # Beregner antall nødvendige turer
 total_trips = math.ceil(total_gas / ship_capacity)
